@@ -10,6 +10,7 @@ program
   .description('Create and access the database of a BASEL Application')
   .option('-p, --password <password>', 'Data base encripted passowrd')
   .option('-a, --algorithm <algorithm>', 'Data base encripted algorithm')
+  .option('-d, --database <database>', 'Name of database')
   .option('-s, --sql <sql>', 'Sql to run')
   .option('-t, --table <table>', 'Create database table')
   .option('-c, --columns <columns>', 'Database table columns. Ex: "id:INTEGER, name:TEXT"')
@@ -18,7 +19,7 @@ program
   .option('-i, --incremental <incremental>', 'incremental columns. Ex: id or "id, number, ..." ')
   .parse(process.argv);
 
-basel.config.database = program.args.length ? program.args[0] : basel.config.database;
+basel.config.database = program.database ? program.database : basel.config.database;
 basel.config.password = program.password;
 basel.config.algorithm = program.algorithm;
 
