@@ -35,6 +35,7 @@ And manipulate the database.
     -h, --help                        output usage information
     -p, --password <password>         Data base encripted passowrd
     -a, --algorithm <algorithm>       Data base encripted algorithm
+    -d, --database <database>         Name of database
     -s, --sql <sql>                   Sql to run
     -t, --table <table>               Create database table
     -c, --columns <columns>           Database table columns. Ex: "id:INTEGER, name:TEXT"
